@@ -1,0 +1,94 @@
+/*For Mobile*/
+html{
+  background-image: url(./imgs/bg.jpg);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas:
+    "hd"
+    "main"
+    "ft";
+}
+  .header{
+    grid-area: hd;
+    margin: 10px;
+    padding-left: 10px;
+    font: 100% palatino, georgia, serif;
+    text-shadow: 2px 2px steelblue;
+  }
+  .blog{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    font: 160%/1.5 palatino;
+    margin: 10px;
+    padding: 40px;
+    background-size: cover;
+  }
+  .btn{
+    width: 300px;
+    height: 150px;
+    border-radius: 25px;
+    border: solid lightgray 5px;
+    margin: 20px;
+  }
+  .btn:hover{
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,1.4);
+    color: rgb(9, 45, 78);
+  }
+  .june{
+    background: lightgreen url(./imgs/btnjune.jpg) 50%;
+    font: 125% bookman, georgia, serif;
+    margin: 5px;
+  }
+  .july{
+    background: plum url(./imgs/btnjuly.jpg) 100% 100%;
+    font: 125% bookman, georgia, serif;
+    margin: 5px;
+  }
+  .footer{
+    grid-area: ft;
+    padding: 10px;
+    margin: 10px;
+    font: bold 100% palatino;
+    text-align: center;
+    background: rgba(231, 229, 229, .5);
+  }
+/*Ipad*/
+@media(min-width: 767px){
+    .btn{
+      height: 300px;
+      border-radius: 50px;
+      width: 625px;
+    }
+}
+/* Desktop*/
+@media(min-width:811px){
+  .container{
+    display: grid;
+    grid-template-columns: 1000px;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas:
+    "hd"
+    "main"
+    "ft";
+  }
+  .blog{
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    font: 160%/1.5 palatino;
+    margin: 10px;
+    padding: 30px;
+    background-size: cover;
+  }
+  .btn{
+    width: 25rem;
+    height: 15rem;
+    border-radius: 25px;
+    border: solid lightgray 5px;
+    margin: 20px;
+  }
+}

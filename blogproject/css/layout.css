@@ -1,0 +1,146 @@
+/*For Mobile*/
+html{
+  background-image: url(./imgs/bg.jpg);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas:
+    "hd"
+    "sd"
+    "main"
+    "ab"
+    "ft";
+    margin: 5px;
+    padding: 10px;
+}
+.box{
+    border-radius: 30px;
+    margin: 20px;
+  }
+  .header{
+    grid-area: hd;
+    font: 100% palatino, georgia, serif;
+    margin: 15px 50px;
+    text-shadow: 2px 2px lightsteelblue;
+    width: auto;
+  }
+  .sidebar {
+    grid-area: sd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .btn{
+    width: 300px;
+    height: 75px;
+    border-radius: 50px;
+    border: solid lightgray 5px;
+  }
+  .btn:hover{
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,1.4);
+  }
+  .home{
+    background: lightsteelblue url(./imgs/bg.jpg);
+    font: 200% palatino;
+    margin: 5px;
+  }
+  .june{
+    background: lightgreen url(./imgs/btnjune.jpg) 50%;
+    font: 200% palatino;
+    margin: 5px;
+  }
+  .july{
+    background: plum url(./imgs/btnjuly.jpg) 100% 100%;
+    font: 200% palatino;
+    margin: 5px;
+  }
+  .pic {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    border-radius: 50px;
+    margin: 30px 10px;
+   
+  }
+  .blog{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    font: 160%/1.5 palatino;
+    margin: 5px;
+    padding: 20px;
+    background: rgba(231, 229, 229, .5);
+    background-size: cover;
+  }
+  .about{
+    grid-area: ab;
+    padding: 10px;
+    margin: 10px;
+    font: bold 100% palatino;
+    text-align: center;
+    background: rgba(231, 229, 229, .5);
+  }
+  .ava{
+    width: auto;
+    height: 200px;
+    border-radius: 50px;
+    margin: 10;
+  }
+  .footer{
+    grid-area: ft;
+    padding: 10px;
+    margin: 10px;
+    font: bold 100% palatino;
+    text-align: center;
+    background: rgba(231, 229, 229, .5);
+    }
+    .social{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+/*ipad version*/
+@media(min-width: 767px){
+  .btn{
+    height: 100px;
+    border-radius: 50px;
+    width: 625px;
+  }
+}
+/* Desktop*/
+@media(min-width:811px){
+  .container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "hd"
+    "main"
+    "ft";
+  }
+  .sidebar {
+    grid-area: sd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .blog{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    font: 160%/1.5 palatino;
+    margin: 10px;
+    padding: 30px;
+    background-size: cover;
+  }
+  .btn{
+    width: 25rem;
+    height: 15rem;
+    border-radius: 25px;
+    border: solid lightgray 5px;
+    margin: 20px;
+  }
+}
